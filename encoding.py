@@ -13,5 +13,4 @@ for letter in range(len(original)):
     for row in byteMap[1:]:
         if original[letter] == row[0]:
             encoded.write(row[2])
-        break
 encoded.close()
