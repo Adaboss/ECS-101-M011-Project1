@@ -3,14 +3,14 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="C:\Users\adatr\Downloads\byteMap.csv">
+        <entry key="\byteMap.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\venv\byteMapTest.csv">
+        <entry key="\byteMapTest.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

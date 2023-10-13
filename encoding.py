@@ -1,20 +1,18 @@
 import csv
 
-byteMapFile = open('byteMapTest.csv')
-byteMap = csv.reader(byteMapFile)
+with open('byteMapTest.csv') as byteMapFile:
+    byteMapReader = csv.reader(byteMapFile)
+    byteMap = list(byteMapReader)
 
 with open('original.txt', 'r') as originalFile:
     original = originalFile.read()
     original.strip()
-
 encoded = open('encoded.txt', 'w')
 
 for letter in range(len(original)):
-
     for row in byteMap:
-
-        if original[letter] == row[0]:
+        if letter == row[0]:
             encoded.write(row[2])
-
+        break
 
 encoded.close()
