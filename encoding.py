@@ -10,9 +10,8 @@ with open('original.txt', 'r') as originalFile:
 encoded = open('encoded.txt', 'w')
 
 for letter in range(len(original)):
-    for row in byteMap:
-        if letter == row[0]:
+    for row in byteMap[1:]:
+        if original[letter] == row[0]:
             encoded.write(row[2])
         break
-
 encoded.close()
