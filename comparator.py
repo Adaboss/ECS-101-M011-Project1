@@ -5,7 +5,7 @@ correctVal = 0
 
 with open('encoded.txt', 'r') as encodedTxt:
     encoded = encodedTxt.read()
-    encoded_file_size = os.path.getsize(encoded)
+    encoded_file_size = len(encoded)/8
 
 with open('decoded.txt', 'r') as decodedTxt:
     decoded = decodedTxt.read()
