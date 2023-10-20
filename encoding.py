@@ -1,19 +1,26 @@
 import csv
 import os
-
 with open('byteMap.csv') as byteMapFile:
     byteMapReader = csv.reader(byteMapFile)
     byteMap = list(byteMapReader)
 
-with open('example1.txt', 'r') as originalFile:
-    original = originalFile.read()
+file = input("Please enter original file name: ")
+originalTxt = open(file)
+original = originalTxt.read()
+
 temp = open('temp.txt', 'w')
 
 for letter in range(len(original)):
-    for row in byteMap[1:]:
+    count = 0
+    for row in byteMap:
         if original[letter] == row[0]:
             temp.write(row[2])
+            count = 0
+        count +=1
+        if count == 62:
+            temp.write(row[2])
 
+temp.close()
 encoded = open('encoded.txt', 'w')
 temp = open('temp.txt', 'r')
 temp_string = temp.read()

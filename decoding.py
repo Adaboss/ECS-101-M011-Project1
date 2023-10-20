@@ -6,6 +6,7 @@ with open('temp.txt', 'r') as encodedFile:
 with open('byteMap.csv') as byteMapFile:
     byteMapReader = csv.reader(byteMapFile)
     byteMap = list(byteMapReader)
+
 decoded = open('decoded.txt', 'w')
 
 index = 0
