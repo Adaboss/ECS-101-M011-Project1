@@ -1,7 +1,7 @@
 import csv
 import os
 
-with open('byteMapTest.csv') as byteMapFile:
+with open('byteMap.csv') as byteMapFile:
     byteMapReader = csv.reader(byteMapFile)
     byteMap = list(byteMapReader)
 
