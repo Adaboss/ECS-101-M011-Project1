@@ -12,7 +12,7 @@ with open('decoded.txt', 'r') as decodedTxt:
     decoded.strip()
 
 file = input("Please enter original file name: ")
-originalTxt = open(file)
+originalTxt = open(file, encoding='utf-8', errors='replace')
 original = originalTxt.read()
 original_file_size = os.path.getsize(file)
 for i in range(len(original)):

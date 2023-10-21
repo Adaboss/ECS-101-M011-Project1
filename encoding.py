@@ -5,7 +5,7 @@ with open('byteMap.csv') as byteMapFile:
     byteMap = list(byteMapReader)
 
 file = input("Please enter original file name: ")
-originalTxt = open(file)
+originalTxt = open(file, encoding='utf-8', errors='replace')
 original = originalTxt.read()
 
 temp = open('temp.txt', 'w')
