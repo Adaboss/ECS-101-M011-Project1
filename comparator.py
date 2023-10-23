@@ -26,4 +26,4 @@ for i in range(len(original)):
 correctness = correctVal / len(original) * 100
 compressionRate = 1- (encoded_file_size /  original_file_size)
 print(f"Correctness: {correctness}")
-print(f"Compression Rate: {compressionRate}")
+print(f"Compression Rate: {compressionRate*100}")

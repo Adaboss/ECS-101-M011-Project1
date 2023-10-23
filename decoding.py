@@ -12,11 +12,11 @@ decoded = open('decoded.txt', 'w')
 index = 0
 lengthEncoded = len(encoded)
 
-while index <= lengthEncoded-1:
+while index <= lengthEncoded - 1:
     if encoded[index] == '1':
         for row in byteMap:
             if encoded[index:index + 4] == row[2]:
-                print(row[0], encoded[index:index+4])
+                print(row[0], encoded[index:index + 4])
                 decoded.write(row[0])
         index += 4
     else:
